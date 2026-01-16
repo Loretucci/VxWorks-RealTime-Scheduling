@@ -12,9 +12,9 @@ The application consists of 3 periodic tasks with distinct periods, designed to 
 
 | Task | Period ($T_i$) | Execution Time ($C_i$) | Resources Used |
 | :---: | :---: | :---: | :---: |
-| **$\tau_1$** | 10 ms | 2 ms | $R_1$ |
-| **$\tau_2$** | 15 ms | 4 ms | $R_3, R_2$ |
-| **$\tau_3$** | 30 ms | 8 ms | $R_1, R_2$ |
+| **${\tau_1}$** | 10 ms | 2 ms | ${\R_1}$ |
+| **${\tau_2}$** | 15 ms | 4 ms | ${\R_1}$,${\R_2}$ |
+| **${\tau_3}$** | 30 ms | 8 ms | ${\R_1}$,${\R_2}$, ${\R_3}$ |
 
 ### Resource Access Protocols
 To manage shared resources and ensure schedulability, the following protocols were analyzed and implemented:
