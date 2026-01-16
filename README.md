@@ -8,13 +8,13 @@ The goal of the project was to design and implement a real-time application comp
 ## System Specification
 
 ### Task Set
-The application consists of 3 periodic tasks with distinct periods, designed to create a high-load scenario ($U_{tot} \approx 0.83$) with complex resource contention.
+The application consists of 3 periodic tasks with distinct periods, designed to create a high-load scenario (U<sub>tot</sub> ≈ 0.83) with complex resource contention.
 
-| Task | Period ($T_i$) | Execution Time ($C_i$) | Resources Used |
+| Task | Period (T<sub>i</sub>) | Execution Time (C<sub>i</sub>) | Resources Used |
 | :---: | :---: | :---: | :---: |
-| **${\tau}_1$** | 10 ms | 2 ms | ${\R_1}$ |
-| **${\tau_2}$** | 15 ms | 4 ms | ${\R_1}$,${\R_2}$ |
-| **${\tau_3}$** | 30 ms | 8 ms | ${\R_1}$,${\R_2}$, ${\R_3}$ |
+| **&tau;<sub>1</sub>** | 10 ms | 2 ms | R<sub>1</sub> |
+| **&tau;<sub>2</sub>** | 15 ms | 4 ms | R<sub>3</sub>, R<sub>2</sub> |
+| **&tau;<sub>3</sub>** | 30 ms | 8 ms | R<sub>1</sub>, R<sub>2</sub> |
 
 ### Resource Access Protocols
 To manage shared resources and ensure schedulability, the following protocols were analyzed and implemented:
@@ -23,8 +23,8 @@ To manage shared resources and ensure schedulability, the following protocols we
 
 ## Feasibility Analysis
 A theoretical analysis was performed before implementation to guarantee the system's schedulability:
-1.  **Utilization Analysis:** Total utilization is $U_p = 0.83$, satisfying the necessary condition ($U \le 1$).
-2.  **Response Time Analysis (RTA):** Calculated considering the **Blocking Time ($B_i$)** introduced by lower-priority tasks holding shared resources.
+1.  **Utilization Analysis:** Total utilization is U<sub>p</sub> = 0.83, satisfying the necessary condition (U ≤ 1).
+2.  **Response Time Analysis (RTA):** Calculated considering the **Blocking Time (B<sub>i</sub>)** introduced by lower-priority tasks holding shared resources.
 3.  **Deadlock Detection:** The report highlights a potential deadlock scenario under specific conditions (Circular Wait) and discusses how HLP resolves or mitigates these issues compared to standard mutexes.
 
 ## Technologies & Tools
