@@ -29,7 +29,7 @@ A theoretical analysis was performed before implementation to guarantee the syst
 
 ## Technologies & Tools
 * **OS:** Wind River VxWorks (tested on `vxsim0`)
-* **Language:** C / C++
+* **Language:** C 
 * **Analysis Tools:** SystemViewer (Wind River Workbench)
 * **Concepts:** Preemptive Scheduling, Semaphores, Mutexes, Deadlock Prevention.
 
